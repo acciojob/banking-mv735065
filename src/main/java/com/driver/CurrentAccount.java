@@ -1,6 +1,8 @@
 package com.driver;
 
 public class CurrentAccount extends BankAccount{
+
+
     String tradeLicenseId; //consists of Uppercase English characters only
     double minimumBalance = 0;
 
@@ -18,7 +20,9 @@ public class CurrentAccount extends BankAccount{
         // minimum balance is 5000 by default. If balance is less than 5000, throw "Insufficient Balance" exception
 
     }
-
+    public String getTradeLicenseId() {
+        return tradeLicenseId;
+    }
     public void validateLicenseId() throws Exception {
         // A trade license Id is said to be valid if no two consecutive characters are same
         // If the license Id is valid, do nothing

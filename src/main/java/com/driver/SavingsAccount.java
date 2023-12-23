@@ -1,6 +1,8 @@
 package com.driver;
 
 public class SavingsAccount extends BankAccount {
+
+
     double rate;
     double maxWithdrawalLimit;
     double minimumBalance = 0;
@@ -41,6 +43,13 @@ public class SavingsAccount extends BankAccount {
     public double getCompoundInterest(int times, int years) {
         // Return the final amount considering that bank gives compound interest on current amount given times per year
         return  (double)super.getBalance() * (double)(Math.pow((double)(1 + (double)this.rate / 100),(double) years));
+    }
+    public double getRate() {
+        return rate;
+    }
+
+    public double getMaxWithdrawalLimit() {
+        return maxWithdrawalLimit;
     }
 
 }

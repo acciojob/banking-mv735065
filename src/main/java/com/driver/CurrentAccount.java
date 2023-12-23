@@ -2,8 +2,19 @@ package com.driver;
 
 public class CurrentAccount extends BankAccount{
     String tradeLicenseId; //consists of Uppercase English characters only
+    double minimumBalance = 0;
 
     public CurrentAccount(String name, double balance, String tradeLicenseId) throws Exception {
+
+      super(name,balance);
+        if(super.getBalance()<5000){
+            throw new Exception("Insufficient Balance");
+        }
+
+
+        this.tradeLicenseId=tradeLicenseId;
+
+
         // minimum balance is 5000 by default. If balance is less than 5000, throw "Insufficient Balance" exception
 
     }

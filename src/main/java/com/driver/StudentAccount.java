@@ -3,6 +3,8 @@ package com.driver;
 public class StudentAccount extends BankAccount{
 
     String  institutionName;
+
+
     double minimumBalance = 0;
 
     public StudentAccount(String name, double balance, String  institutionName) {
@@ -13,5 +15,9 @@ public class StudentAccount extends BankAccount{
 
 
     }
+    public String getInstitutionName() {
+        return institutionName;
+    }
+
 
 }
